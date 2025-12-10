@@ -6,7 +6,7 @@ export default function AdityaUniversityAuth() {
   return (
     <div className="relative min-h-screen flex items-center justify-center p-6 overflow-hidden">
 
-      {/* 🔥 Fullscreen Background Video */}
+      {/* 🔥 Background Video */}
       <video
         autoPlay
         loop
@@ -17,18 +17,24 @@ export default function AdityaUniversityAuth() {
         <source src="https://res.cloudinary.com/dfxec3czi/video/upload/v1757921880/Drone_shot_Aditya_ntq0k5.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark overlay for readability */}
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
       {/* Main content */}
       <div className="relative w-full max-w-md z-10">
-        <div className="flex items-center justify-center mb-6">
-          <div className="text-center">
-            <h1 className="text-3xl font-extrabold text-yellow-300 drop-shadow-lg tracking-tight">
-              Aditya University
-            </h1>
-            <p className="text-sm text-yellow-100/90">Student & Employee Login Portal</p>
-          </div>
+
+        {/* 🔥 Logo + Title */}
+        <div className="flex flex-col items-center justify-center mb-6">
+          <img
+           
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJUpXOs0chE8i7X7bhjr3MnK8PWHV1DHQlg&s"
+            alt="Aditya University Logo"
+            className="w-20 h-20 object-contain drop-shadow-xl mb-3 rounded-full"
+          />
+          <h1 className="text-3xl font-extrabold text-yellow-300 drop-shadow-lg tracking-tight">
+            Aditya University
+          </h1>
+          <p className="text-sm text-yellow-100/90">Student & Employee Login Portal</p>
         </div>
 
         {/* Toggle */}
@@ -64,78 +70,79 @@ export default function AdityaUniversityAuth() {
               isEmployee ? "rotate-y-180" : ""
             }`}
           >
-            {/* FRONT: Student */}
-            <div className="absolute inset-0 backface-hidden rounded-2xl bg-slate-900/70 backdrop-blur-xl p-8 border border-white/10">
-              <div className="text-white">
-                <h2 className="text-2xl font-bold mb-1">Student Login</h2>
-                <p className="text-sm text-white/70 mb-6">
-                  Enter your Roll No. and password
-                </p>
+  {/* FRONT – Student */}
+<div className="absolute inset-0 backface-hidden rounded-2xl bg-white/20 backdrop-blur-xl p-8 border border-white/20">
+  <div className="text-white">
+    <h2 className="text-2xl font-bold mb-1">Student Login</h2>
+    <p className="text-sm text-white/70 mb-6">
+      Enter your Roll No. and password
+    </p>
 
-                <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-                  <input
-                    type="text"
-                    placeholder="Roll No. (e.g. 23MH1A4215)"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-yellow-300"
-                  />
+    <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+      <input
+        type="text"
+        placeholder="Roll No. (e.g. 23MH1A4215)"
+        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/40 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-yellow-300"
+      />
 
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-yellow-300"
-                  />
+      <input
+        type="password"
+        placeholder="Password"
+        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/40 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-yellow-300"
+      />
 
-                  <button className="mt-3 w-full py-3 rounded-lg font-semibold bg-yellow-300 text-slate-900 shadow-lg">
-                    Login
-                  </button>
-                </form>
+      <button className="mt-3 w-full py-3 rounded-lg font-semibold bg-yellow-300 text-slate-900 shadow-lg">
+        Login
+      </button>
+    </form>
 
-                <div className="mt-6 text-center text-white/80">
-                  Are you an employee?{" "}
-                  <button onClick={() => setIsEmployee(true)} className="underline">
-                    Switch to Employee
-                  </button>
-                </div>
-              </div>
-            </div>
+    <div className="mt-6 text-center text-white/80">
+      Are you an employee?{" "}
+      <button onClick={() => setIsEmployee(true)} className="underline">
+        Switch to Employee
+      </button>
+    </div>
+  </div>
+</div>
 
-            {/* BACK: Employee */}
-            <div className="absolute inset-0 rotate-y-180 backface-hidden rounded-2xl bg-slate-900/70 backdrop-blur-xl p-8 border border-white/10">
-              <div className="text-white">
-                <h2 className="text-2xl font-bold mb-1">Employee Login</h2>
-                <p className="text-sm text-white/70 mb-6">
-                  Enter your Employee ID and password
-                </p>
+{/* BACK – Employee */}
+<div className="absolute inset-0 rotate-y-180 backface-hidden rounded-2xl bg-white/20 backdrop-blur-xl p-8 border border-white/20">
+  <div className="text-white">
+    <h2 className="text-2xl font-bold mb-1">Employee Login</h2>
+    <p className="text-sm text-white/70 mb-6">
+      Enter your Employee ID and password
+    </p>
 
-                <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-                  <input
-                    type="text"
-                    placeholder="Employee ID (e.g. EMP1243)"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-yellow-300"
-                  />
+    <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+      <input
+        type="text"
+        placeholder="Employee ID (e.g. EMP1243)"
+        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/40 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-yellow-300"
+      />
 
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-yellow-300"
-                  />
+      <input
+        type="password"
+        placeholder="Password"
+        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/40 text-white placeholder-white/60 outline-none focus:ring-2 focus:ring-yellow-300"
+      />
 
-                  <button className="w-full py-3 rounded-lg font-semibold bg-yellow-300 text-slate-900 shadow-lg">
-                    Login
-                  </button>
-                </form>
+      <button className="w-full py-3 rounded-lg font-semibold bg-yellow-300 text-slate-900 shadow-lg">
+        Login
+      </button>
+    </form>
 
-                <div className="mt-5 text-center text-white/80">
-                  Back to student login?{" "}
-                  <button onClick={() => setIsEmployee(false)} className="underline">
-                    Student Login
-                  </button>
-                </div>
-              </div>
-            </div>
+    <div className="mt-5 text-center text-white/80">
+      Back to student login?{" "}
+      <button onClick={() => setIsEmployee(false)} className="underline">
+        Student Login
+      </button>
+    </div>
+  </div>
+</div>
+
+
           </div>
         </div>
-
       </div>
 
       {/* Flip CSS */}
