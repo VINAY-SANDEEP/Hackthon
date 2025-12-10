@@ -95,16 +95,8 @@ export default function AdityaUniversityAuth() {
         Login
       </button>
     </form>
-
-    <div className="mt-6 text-center text-white/80">
-      Are you an employee?{" "}
-      <button onClick={() => setIsEmployee(true)} className="underline">
-        Switch to Employee
-      </button>
-    </div>
   </div>
 </div>
-
 {/* BACK – Employee */}
 <div className="absolute inset-0 rotate-y-180 backface-hidden rounded-2xl bg-white/20 backdrop-blur-xl p-8 border border-white/20">
   <div className="text-white">
@@ -131,12 +123,6 @@ export default function AdityaUniversityAuth() {
       </button>
     </form>
 
-    <div className="mt-5 text-center text-white/80">
-      Back to student login?{" "}
-      <button onClick={() => setIsEmployee(false)} className="underline">
-        Student Login
-      </button>
-    </div>
   </div>
 </div>
 
